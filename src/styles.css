@@ -18,3 +18,10 @@ ul {
   list-style-type: none;
   margin-left: -35px;
 }
+#now-weather {
+  text-align: justify;
+  font-size: 50px;
+}
+#details {
+  font-size: 30px;
+}
