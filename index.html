@@ -19,42 +19,46 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="mb-3">
-          <label
-            for="WeatherSearch"
-            class="form-label"
-            placeholder="Enter City"
-          ></label>
-          <input type="city" class="form-control" id="InputCity" />
-          <div id="emailHelp" class="form-text"></div>
+      <div class="weather-app">
+        <form>
+          <div class="mb-3">
+            <label
+              for="WeatherSearch"
+              class="form-label"
+              placeholder="Enter City"
+            ></label>
+            <input type="city" class="form-control" id="InputCity" />
+            <div id="emailHelp" class="form-text"></div>
 
-          <button type="submit" class="btn btn-primary">Search</button>
-        </div>
-      </form>
-      <div class="row">
-        <div class="col-md-8 details">
-          <h1>Kampala</h1>
-          <h2>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </form>
+        <h1>Kampala</h1>
+        <h2>
+          Sunday 10am <br />
+          Clear
+        </h2>
+        <div class="row">
+          <div class="col-md-8" id="now-weather">
+            <i class="fa-solid fa-sun" id="today-icon"></i> 22º C | ºF
+          </div>
+          <div class="col-md-4 details">
             <ul>
               <li>precipitation</li>
               <li>humidity</li>
               <li>wind</li>
             </ul>
-          </h2>
+          </div>
         </div>
-        <div class="col-md-4" id="now-weather">
-          <i class="fa-solid fa-sun" id="today-icon"></i> 22º
-        </div>
+        <br />
       </div>
-      <br />
-    </div>
-    <small>
-      <a href="https://github.com/Jamimajams/SheCodes-Project-3"
-        >Open-source code</a
+      <small>
+        <a href="https://github.com/Jamimajams/SheCodes-Project-3"
+          >Open-source code</a
+        >
+        by Natasha Jamima</small
       >
-      by Natasha Jamima</small
-    >
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
