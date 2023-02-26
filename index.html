@@ -11,6 +11,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/ace14f6a59.js"
       crossorigin="anonymous"
@@ -30,24 +31,26 @@
             ></label>
             <input type="city" class="form-control" id="InputCity" />
             <div id="emailHelp" class="form-text"></div>
-
             <button type="submit" class="btn btn-primary">Search</button>
           </div>
         </form>
-        <h1>Kampala</h1>
+        <h1 id="city"></h1>
         <h2>
-          Sunday 10am <br />
-          Clear
+          <ul>
+            <li id="day-time"></li>
+            <li id="description"></li>
+          </ul>
         </h2>
         <div class="row">
           <div class="col-md-8" id="now-weather">
-            <i class="fa-solid fa-sun" id="today-icon"></i> 22º C | ºF
+            <i class="fa-solid fa-sun" id="today-icon"></i>
+            <strong id="temp"></strong><small>ºC | <a href="#">ºF</a> </small>
           </div>
           <div class="col-md-4 details">
             <ul>
               <li>precipitation</li>
-              <li>humidity</li>
-              <li>wind</li>
+              <li id="humidity">humidity</li>
+              <li id="wind">wind</li>
             </ul>
           </div>
         </div>

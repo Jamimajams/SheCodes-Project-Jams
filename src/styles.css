@@ -19,19 +19,30 @@ h2 {
 }
 #details {
   text-align: justify;
+  font-size: 30px;
 }
 ul {
   list-style: none;
-  margin-left: -35px;
   padding: 0;
 }
-#today-icon {
-  font-size: larger;
+li {
+  text-transform: capitalize;
 }
+i {
+  font-size: 70px;
+  color: rgb(255, 255, 137);
+  margin-right: 10px;
+}
+#now-weather strong {
+  font-size: 60px;
+}
+
 #now-weather {
-  text-align: justify;
   font-size: 30px;
 }
-#details {
-  font-size: 30px;
+small {
+  position: relative;
+  margin-bottom: 35px;
+  font-size: 16px;
+  top: -30px;
 }
