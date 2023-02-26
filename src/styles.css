@@ -28,7 +28,7 @@ ul {
 li {
   text-transform: capitalize;
 }
-i {
+#icon {
   font-size: 70px;
   color: rgb(255, 255, 137);
   margin-right: 10px;

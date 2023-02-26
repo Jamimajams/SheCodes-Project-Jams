@@ -1,4 +1,4 @@
-let city = `London`;
+let city = `Kampala`;
 let apiKey = `7ed26a6948c661d05fafe7355b41b2ec`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -52,6 +52,15 @@ function weatherSearch(Response) {
   let wind = Response.data.wind.speed;
   let updateWind = document.querySelector("#wind");
   updateWind.innerHTML = `Wind: ${wind}km/h`;
+
+  let icon = Response.data.weather[0].icon;
+  console.log(icon);
+  let updateIcon = document.querySelector("#icon");
+  updateIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
+  updateIcon.setAttribute("alt", `${description}`);
 
   let updateDate = document.querySelector("#day-time");
   updateDate.innerHTML = `last updated: ${formatDate(Response.data.dt * 1000)}`;
