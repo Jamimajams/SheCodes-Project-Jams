@@ -1,7 +1,3 @@
-let city = `Kampala`;
-let apiKey = `7ed26a6948c661d05fafe7355b41b2ec`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 function formatDate(timestamp) {
   let now = new Date(timestamp);
   console.log(timestamp);
@@ -65,4 +61,19 @@ function weatherSearch(Response) {
   let updateDate = document.querySelector("#day-time");
   updateDate.innerHTML = `last updated: ${formatDate(Response.data.dt * 1000)}`;
 }
-axios.get(apiUrl).then(weatherSearch);
+function search(city) {
+  let apiKey = `7ed26a6948c661d05fafe7355b41b2ec`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(weatherSearch);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  console.log(cityInput.value);
+  search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
