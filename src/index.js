@@ -1,5 +1,35 @@
+let city = `London`;
 let apiKey = `7ed26a6948c661d05fafe7355b41b2ec`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kampala&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  console.log(timestamp);
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  console.log(day);
+
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  console.log(hour);
+  let minutues = now.getMinutes();
+  if (minutues < 10) {
+    minutues = `0${minutues}`;
+  }
+
+  return `${day} ${hour}:${minutues}`;
+}
 
 function weatherSearch(Response) {
   console.log(Response.data);
@@ -22,5 +52,8 @@ function weatherSearch(Response) {
   let wind = Response.data.wind.speed;
   let updateWind = document.querySelector("#wind");
   updateWind.innerHTML = `Wind: ${wind}km/h`;
+
+  let updateDate = document.querySelector("#day-time");
+  updateDate.innerHTML = `last updated: ${formatDate(Response.data.dt * 1000)}`;
 }
 axios.get(apiUrl).then(weatherSearch);
