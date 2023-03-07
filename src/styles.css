@@ -51,3 +51,16 @@ small {
   cursor: default;
   text-decoration: none;
 }
+.forecast {
+  margin: 10px auto;
+}
+
+#forecastIcon {
+  width: 36px;
+}
+.degrees {
+  font-size: 11px;
+}
+.lowest {
+  color: grey;
+}
