@@ -28,10 +28,11 @@ ul {
 li {
   text-transform: capitalize;
 }
-#icon {
+#con {
   font-size: 70px;
   color: rgb(255, 255, 137);
   margin-right: 10px;
+  text-align: center;
 }
 #now-weather strong {
   font-size: 60px;
@@ -59,7 +60,7 @@ small {
   width: 36px;
 }
 .degrees {
-  font-size: 11px;
+  font-size: 17px;
 }
 .lowest {
   color: grey;
