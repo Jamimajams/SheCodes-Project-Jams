@@ -99,7 +99,34 @@ function displayCelciusTemp(event) {
   temperatureElement.innerHTML = Math.round(celciusTemp);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                ${day}</div>
+                <img
+                  src="http://openweathermap.org/img/wn/04n@2x.png"
+                  alt=""
+                  id="forecastIcon"
+                  width="42"
+                />
+                <div class="degrees">
+                  <span class="highest">21º</span>
+                  <span class="lowest"> 8º</span>
+                </div>
+              </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 search("London");
+displayForecast();
 
 let fahrenheitLink = document.querySelector("#fahrenheitLink");
 fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
