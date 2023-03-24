@@ -30,7 +30,6 @@ li {
 }
 #con {
   font-size: 70px;
-  color: rgb(255, 255, 137);
   margin-right: 10px;
   text-align: center;
 }
@@ -52,12 +51,11 @@ small {
   cursor: default;
   text-decoration: none;
 }
-.forecast {
-  margin: 10px auto;
+.col {
+  text-align: center;
 }
-
 #forecastIcon {
-  width: 36px;
+  width: 45px;
 }
 .degrees {
   font-size: 17px;
