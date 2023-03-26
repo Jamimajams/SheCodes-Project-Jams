@@ -92,32 +92,11 @@ function search(city) {
   axios.get(apiUrl).then(weatherSearch);
 }
 
-function displayfahrenheitTemp(event) {
-  event.preventDefault();
-  // remove active class from celcius.
-  celciusLink.classList.remove("active");
-  // add active class to fahrenheit.
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temp");
-  let fahrenheit = (celciusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheit);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
   console.log(cityInput.value);
   search(cityInput.value);
-}
-
-function displayCelciusTemp(event) {
-  event.preventDefault();
-  // remove active class from fahrenheit.
-  fahrenheitLink.classList.remove("active");
-  // add active class to celcius.
-  celciusLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(celciusTemp);
 }
 
 function displayForecast(Response) {
@@ -160,11 +139,5 @@ function displayForecast(Response) {
 
 search("London");
 
-let fahrenheitLink = document.querySelector("#fahrenheitLink");
-fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celciusLink = document.querySelector("#celciusLink");
-celciusLink.addEventListener("click", displayCelciusTemp);
